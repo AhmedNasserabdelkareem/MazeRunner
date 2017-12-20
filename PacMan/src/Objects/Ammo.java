@@ -1,19 +1,14 @@
 package Objects;
 
-public class Ammo extends State implements Interactables {
+public class Ammo extends State {
 	private String Direction = "";
-	/*private int IR = 0;
-	private int JD = 0;
-	private int IL = 0;
-	private int JL = 0;*/
 	private int IndexY = 0;
 	private int IndexX = 0;
 	private int orderIndex;
-	// take care here
+	
 	public Boolean Existance = true;
 	 public Ammo(int order) {
-		// TODO Auto-generated constructor stub
-		 orderIndex = order;
+		orderIndex = order;
 	}
 
 

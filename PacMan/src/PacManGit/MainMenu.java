@@ -5,8 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.Window.Type;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -21,6 +19,7 @@ public class MainMenu {
 	public JButton Hard = new JButton("");
 	public JButton Option = new JButton("");
 	public JButton normalBtn = new JButton("");
+	public JPanel mainMenu = new JPanel();
 	/**
 	 * Launch the application.
 	 */
@@ -54,7 +53,7 @@ public class MainMenu {
 		frmMainmenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMainmenu.getContentPane().setLayout(null);
 		
-		JPanel mainMenu = new JPanel();
+		
 		mainMenu.setBackground(new Color(0, 255, 0));
 		mainMenu.setBounds(0, 0, 1000, 735);
 		frmMainmenu.getContentPane().add(mainMenu);

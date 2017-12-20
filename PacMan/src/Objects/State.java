@@ -7,6 +7,14 @@ public class State {
 		return false;
 		
 	}
+	public boolean  isWinner (){
+		return false;
+		
+	}
+	public boolean  isLoser (){
+		return false;
+		
+	}
 	public String  getOldDirection (){
 		return null;
 		
@@ -102,6 +110,12 @@ public class State {
 	}
 	
 	public void setExistance(boolean e){
+		
+	}
+	public void setWinner(boolean e){
+		
+	}
+	public void setLoser(boolean e){
 		
 	}
 	public void  setRotationDir (String x){

@@ -1,39 +1,35 @@
 package PacManGit;
 
-import java.util.LinkedList;
+
 
 import Objects.Ammo;
 
 public class AmmoPool {
 	  private final static int SIZE =6; 
-	  private LinkedList<Ammo> Ammos;
-	  private int Counter =6;
-
+	  private Iterator AmmoList;
+	 
 	  public AmmoPool() {
-		  Ammos = new LinkedList<>();
+		  AmmoList = new Iterator();
 		  for(int i=0;i<SIZE;i++){
-			  Ammos.add(new Ammo(i));
-		  }
-		  
+			  AmmoList.add(new Ammo(i));
+		  }		  
 	  }
 
 	
 	protected Ammo create() {
 		// TODO Auto-generated method stub
-		Ammo x = Ammos.getLast();
-		Counter--;
-		Ammos.removeLast();
+		AmmoList.ResetPointer();
+		Ammo x  = null;
+		if(AmmoList.hasNext()){
+			x = AmmoList.next();
+			AmmoList.remove(x);
+		}		
 		return x;
 	}
 
 
 	public void expire(Ammo o) {
-		// TODO Auto-generated method stub
-		if (o != null&&Counter<=6){
-			Ammos.add(Counter, o);
-			Counter++;
-		}
-		
+		AmmoList.add(o);		
 	}
 
 }

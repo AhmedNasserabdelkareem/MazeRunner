@@ -1,6 +1,5 @@
 package PacManGit;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,7 +15,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JSeparator;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class Options extends JFrame {
 ImageFlyWeight fly =ImageFlyWeight.getinstance();
 	private JPanel contentPane;
@@ -56,73 +59,80 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		contentPane.setBackground(new java.awt.Color(152, 230, 152));
+		contentPane.setBackground(Color.ORANGE);
 		
 		JLabel bombname = new JLabel("BOMB");
-		bombname.setFont(new Font("Tahoma", Font.BOLD, 14));
-		bombname.setBounds(50, 33, 111, 23);
+		bombname.setHorizontalAlignment(SwingConstants.CENTER);
+		bombname.setFont(new Font("Forte", Font.BOLD, 18));
+		bombname.setBounds(94, 20, 111, 49);
 		contentPane.add(bombname);
 		
 		 bombimage = new JLabel("", fly.getImageIcon("bomb"), JLabel.CENTER);
-		bombimage.setBounds(50, 68,22, 22);
+		bombimage.setBounds(140, 83,22, 22);
 		contentPane.add(bombimage);
 
 		
-		JLabel giftname = new JLabel("gift");
-		giftname.setFont(new Font("Tahoma", Font.BOLD, 14));
-		giftname.setBounds(150, 33, 111, 23);
+		JLabel giftname = new JLabel("GIFT");
+		giftname.setHorizontalAlignment(SwingConstants.CENTER);
+		giftname.setFont(new Font("Forte", Font.BOLD, 18));		
+		giftname.setBounds(449, 20, 111, 49);
 		contentPane.add(giftname);
 		
 		 giftimage = new JLabel("", fly.getImageIcon("gift"), JLabel.CENTER);
-		giftimage.setBounds(150, 68,22, 22);
+		giftimage.setBounds(491, 83,22, 22);
 		contentPane.add(giftimage);
 		
-		JLabel treename = new JLabel("tree");
-		treename.setFont(new Font("Tahoma", Font.BOLD, 14));
-		treename.setBounds(250, 33, 111, 23);
+		JLabel treename = new JLabel("TREE");
+		treename.setHorizontalAlignment(SwingConstants.CENTER);
+		treename.setFont(new Font("Forte", Font.BOLD, 18));	
+		treename.setBounds(757, 20, 111, 49);
 		contentPane.add(treename);
 		
 		 treeimage = new JLabel("", fly.getImageIcon("tree"), JLabel.CENTER);
-		treeimage.setBounds(250, 68,22, 22);
+		treeimage.setBounds(811, 83,22, 22);
 		contentPane.add(treeimage);
 		
-		JLabel bigbombname = new JLabel("bigbomb");
-		bigbombname.setFont(new Font("Tahoma", Font.BOLD, 14));
-		bigbombname.setBounds(350, 33, 111, 23);
+		JLabel bigbombname = new JLabel("BIGBOMB");
+		bigbombname.setHorizontalAlignment(SwingConstants.CENTER);
+		bigbombname.setFont(new Font("Forte", Font.BOLD, 18));
+		bigbombname.setBounds(94, 223, 111, 49);
 		contentPane.add(bigbombname);
 		
 		 bigBombimage = new JLabel("", fly.getImageIcon("bigBomb"), JLabel.CENTER);
-		bigBombimage.setBounds(350, 68,22, 22);
+		bigBombimage.setBounds(140, 299,22, 22);
 		contentPane.add(bigBombimage);
 		
 		
-		JLabel spacename = new JLabel("space");
-		spacename.setFont(new Font("Tahoma", Font.BOLD, 14));
-		spacename.setBounds(450, 33, 111, 23);
+		JLabel spacename = new JLabel("SPACE");
+		spacename.setHorizontalAlignment(SwingConstants.CENTER);
+		spacename.setFont(new Font("Forte", Font.BOLD, 18));
+		spacename.setBounds(449, 223, 111, 49);
 		contentPane.add(spacename);
 		
 		 spaceimage = new JLabel("", fly.getImageIcon("space"), JLabel.CENTER);
-		spaceimage.setBounds(450, 68,22, 22);
+		spaceimage.setBounds(491, 299,22, 22);
 		contentPane.add(spaceimage);
 		
-		JLabel wallname = new JLabel("wall");
-		wallname.setFont(new Font("Tahoma", Font.BOLD, 14));
-		wallname.setBounds(550, 33, 111, 23);
+		JLabel wallname = new JLabel("WALL");
+		wallname.setHorizontalAlignment(SwingConstants.CENTER);
+		wallname.setFont(new Font("Forte", Font.BOLD, 18));
+		wallname.setBounds(769, 223, 111, 49);
 		contentPane.add(wallname);
 		
 		 wallimage = new JLabel("", fly.getImageIcon("wall"), JLabel.CENTER);
-		wallimage.setBounds(550, 68,22, 22);
+		wallimage.setBounds(811, 299,22, 22);
 		contentPane.add(wallimage);
 		
 		
 		
-		JLabel ammoname = new JLabel("ammo");
-		ammoname.setFont(new Font("Tahoma", Font.BOLD, 14));
-		ammoname.setBounds(650, 33, 111, 23);
+		JLabel ammoname = new JLabel("AMMO");
+		ammoname.setHorizontalAlignment(SwingConstants.CENTER);
+		ammoname.setFont(new Font("Forte", Font.BOLD, 18));		
+		ammoname.setBounds(94, 444, 111, 49);
 		contentPane.add(ammoname);
 		
 		 ammoimage = new JLabel("", fly.getImageIcon("ammo"), JLabel.CENTER);
-		ammoimage.setBounds(650, 68,22, 22);
+		ammoimage.setBounds(140, 506,22, 22);
 		contentPane.add(ammoimage);
 		
 		
@@ -136,13 +146,13 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			 //  System.out.println(fly.getImageIcon("gift"));
 			    contentPane.remove(giftimage);
 			    giftimage= new JLabel("", fly.getImageIcon("gift"), JLabel.CENTER);
-			    giftimage.setBounds(150, 68,22, 22);
+			    giftimage.setBounds(491, 83,22, 22);
 			    contentPane.add(giftimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();
 			}
 		});
-		giftbtn.setBounds(150, 96, 89, 23);
+		giftbtn.setBounds(437, 118, 123, 49);
 		contentPane.add(giftbtn);
 		
 		
@@ -156,7 +166,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 				 //  System.out.println(fly.getImageIcon("gift"));
 				    contentPane.remove(treeimage);
 				    treeimage= new JLabel("", fly.getImageIcon("tree"), JLabel.CENTER);
-				    treeimage.setBounds(250, 68,22, 22);
+				    treeimage.setBounds(811, 83,22, 22);
 				    contentPane.add(treeimage);
 				    contentPane.revalidate();
 				    contentPane.repaint();			    
@@ -164,7 +174,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 
 			}
 		});
-		treebtn.setBounds(250, 96, 89, 23);
+		treebtn.setBounds(757, 118, 123, 49);
 		contentPane.add(treebtn);
 
 		JButton bombbtn = new JButton("Replace");
@@ -177,7 +187,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			    fly.setImageIcon("bomb", chooser.getSelectedFile().getAbsolutePath());
 			    contentPane.remove(bombimage);
 			    bombimage= new JLabel("", fly.getImageIcon("bomb"), JLabel.CENTER);
-			    bombimage.setBounds(50, 68,22, 22);
+			    bombimage.setBounds(140, 83,22, 22);
 			    contentPane.add(bombimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();	
@@ -186,7 +196,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			}
 		});
 
-		bombbtn.setBounds(50, 96, 89, 23);
+		bombbtn.setBounds(94, 120, 123, 45);
 		contentPane.add(bombbtn);
 		JButton bigbombbtn = new JButton("Replace");
 		bigbombbtn.addActionListener(new ActionListener() {
@@ -198,7 +208,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			    fly.setImageIcon("bigBomb", chooser.getSelectedFile().getAbsolutePath());
 			    contentPane.remove(bigBombimage);
 			    bigBombimage= new JLabel("", fly.getImageIcon("bigBomb"), JLabel.CENTER);
-			    bigBombimage.setBounds(350, 68,22, 22);
+			    bigBombimage.setBounds(140, 299,22, 22);
 			    contentPane.add(bigBombimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();	
@@ -208,7 +218,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 
 			}
 		});
-		bigbombbtn.setBounds(350, 96, 89, 23);
+		bigbombbtn.setBounds(94, 334, 123, 45);
 		contentPane.add(bigbombbtn);
 
 		
@@ -226,7 +236,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			    fly.setImageIcon("space", chooser.getSelectedFile().getAbsolutePath());
 			    contentPane.remove(spaceimage);
 			    spaceimage= new JLabel("", fly.getImageIcon("space"), JLabel.CENTER);
-			    spaceimage.setBounds(50, 68,22, 22);
+			    spaceimage.setBounds(491, 299,22, 22);
 			    contentPane.add(spaceimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();	
@@ -235,7 +245,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			}
 		});
 
-		spacebtn.setBounds(450, 96, 89, 23);
+		spacebtn.setBounds(437, 332, 123, 49);
 		contentPane.add(spacebtn);
 		
 
@@ -249,7 +259,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			    fly.setImageIcon("wall", chooser.getSelectedFile().getAbsolutePath());
 			    contentPane.remove(wallimage);
 			    wallimage= new JLabel("", fly.getImageIcon("wall"), JLabel.CENTER);
-			    wallimage.setBounds(50, 68,22, 22);
+			    wallimage.setBounds(811, 299,22, 22);
 			    contentPane.add(wallimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();	
@@ -258,7 +268,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			}
 		});
 
-		wallbtn.setBounds(550, 96, 89, 23);
+		wallbtn.setBounds(757, 332, 123, 49);
 		contentPane.add(wallbtn);
 		
 		
@@ -275,7 +285,7 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			    fly.setImageIcon("ammo", chooser.getSelectedFile().getAbsolutePath());
 			    contentPane.remove(ammoimage);
 			    ammoimage= new JLabel("", fly.getImageIcon("ammo"), JLabel.CENTER);
-			    ammoimage.setBounds(650, 68,22, 22);
+			    ammoimage.setBounds(140, 506,22, 22);
 			    contentPane.add(ammoimage);
 			    contentPane.revalidate();
 			    contentPane.repaint();	
@@ -284,11 +294,38 @@ ImageFlyWeight fly =ImageFlyWeight.getinstance();
 			}
 		});
 
-		ammobtn.setBounds(650, 96, 89, 23);
+		ammobtn.setBounds(94, 541, 123, 49);
 		contentPane.add(ammobtn);
+		back_BTN.setIcon(new ImageIcon(Options.class.getResource("/javax/swing/plaf/metal/icons/ocean/close-pressed.gif")));
 		
-		
-		back_BTN.setBounds(483, 233, 89, 23);
+		back_BTN.setBounds(757, 506, 123, 49);
 		contentPane.add(back_BTN);
+		
+		JSeparator separator = new JSeparator();
+		separator.setOrientation(SwingConstants.VERTICAL);
+		separator.setForeground(Color.BLACK);
+		separator.setBackground(Color.BLACK);
+		separator.setBounds(321, 13, 5, 600);
+		contentPane.add(separator);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setOrientation(SwingConstants.VERTICAL);
+		separator_1.setForeground(Color.BLACK);
+		separator_1.setBackground(Color.BLACK);
+		separator_1.setBounds(660, 13, 5, 600);
+		contentPane.add(separator_1);
+		
+		
+		JSeparator separator_2 = new JSeparator();
+		separator_2.setForeground(Color.BLACK);
+		separator_2.setBackground(Color.BLACK);
+		separator_2.setBounds(12, 200, 958, 12);
+		contentPane.add(separator_2);
+		
+		JSeparator separator_3 = new JSeparator();
+		separator_3.setForeground(Color.BLACK);
+		separator_3.setBackground(Color.BLACK);
+		separator_3.setBounds(12, 400, 958, 12);
+		contentPane.add(separator_3);
 	}
 }

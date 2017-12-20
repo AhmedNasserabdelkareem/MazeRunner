@@ -4,7 +4,10 @@ import java.awt.Point;
 import java.util.Random;
 import java.util.Stack;
 
+import mazeGenerate.IDifficulty;
+
 public class MazeGenerator {
+	private static MazeGenerator instance;
 	public char[][] maze;
 	private char[][] extendedmaze;
 	private char[][] BorderedMaze;
@@ -26,7 +29,9 @@ public class MazeGenerator {
 	private final static int ZERO = 0;
 	private final static int ONE = 1;
 	private final static int TWO = 2;
-
+	private MazeGenerator() {
+		
+	}
 	public char[][] generate(int height, int width) {
 		x.setSeed((long) (Math.random() * 10000));
 		maze = new char[(height + ONE) / TWO][(width + ONE) / TWO];
@@ -334,32 +339,20 @@ public class MazeGenerator {
 			System.out.println();
 		}
 	}
-	public void setEasyLevel() {
-		System.out.println("HERE");
-		NO_TREESR = new Integer(3);
-		NO_TREESW = new Integer(5);
-		NO_SBOMBS = new Integer(2);
-		NO_BBOMBS = new Integer(2);
-		NO_AGIFTS = new Integer(3);
-		NO_HGIFTS = new Integer(3);
-		NO_UGIFTS = new Integer(1);
+	public void setLevel(IDifficulty diff) {
+		
+		NO_TREESR = diff.getTreeSR();
+		NO_TREESW = diff.getTreeSW();
+		NO_SBOMBS = diff.getSBombs();
+		NO_BBOMBS = diff.getBBombs();
+		NO_AGIFTS = diff.getAGifts();
+		NO_HGIFTS = diff.getHGifts();
+		NO_UGIFTS = diff.getUGifts();
 	}
-	public void setNormalLevel() {
-		NO_TREESR = new Integer(4);
-		NO_TREESW = new Integer(4);
-		NO_SBOMBS = new Integer(3);
-		NO_BBOMBS = new Integer(4);
-		NO_AGIFTS = new Integer(3);
-		NO_HGIFTS = new Integer(2);
-		NO_UGIFTS = new Integer(1);
-	}
-	public void setHardLevel() {
-		NO_TREESR = new Integer(5);
-		NO_TREESW = new Integer(3);
-		NO_SBOMBS = new Integer(4);
-		NO_BBOMBS = new Integer(8);
-		NO_AGIFTS = new Integer(3);
-		NO_HGIFTS = new Integer(1);
-		NO_UGIFTS = new Integer(1);
+	public static MazeGenerator getInstance() {
+		if(instance == null) {
+			instance = new MazeGenerator();
+		}
+		return instance;
 	}
 }

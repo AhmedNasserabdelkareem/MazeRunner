@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="mazeGenerate.NormalGame" project="DBase" 
+    file="/DBase/src/mazeGenerate/NormalGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="124" x="1842" y="-56"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="mazeGenerate.EasyGame" project="DBase" 
+    file="/DBase/src/mazeGenerate/EasyGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="93" width="124" x="2012" y="-44"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="mazeGenerate.HardGame" project="DBase" 
+    file="/DBase/src/mazeGenerate/HardGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="93" width="124" x="2168" y="-46"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="mazeGenerate.IDifficulty" project="DBase" 
+    file="/DBase/src/mazeGenerate/IDifficulty.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="111" width="124" x="2040" y="-203"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="Objects.Stones" project="DBase" file="/DBase/src/Objects/Stones.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="111" width="135" x="2580" y="-304"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="Objects.Tree" project="DBase" file="/DBase/src/Objects/Tree.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="109" width="129" x="2731" y="-305"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="Objects.HalfBomb" project="DBase" file="/DBase/src/Objects/HalfBomb.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="109" width="141" x="2887" y="-303"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="Objects.AmmoGift" project="DBase" file="/DBase/src/Objects/AmmoGift.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="129" x="3057" y="-303"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="Objects.Health" project="DBase" file="/DBase/src/Objects/Health.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="111" width="123" x="3202" y="-306"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="Objects.Player" project="DBase" file="/DBase/src/Objects/Player.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="105" width="131" x="2432" y="-302"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="Objects.State" project="DBase" file="/DBase/src/Objects/State.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="85" width="115" x="2971" y="-590"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" language="java" name="Objects.Interactables" project="DBase" 
+    file="/DBase/src/Objects/Interactables.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="85" width="103" x="2795" y="-598"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" language="java" name="Objects.FullBomb" project="DBase" file="/DBase/src/Objects/FullBomb.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="91" width="121" x="3362" y="-295"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="Objects.PathFree" project="DBase" file="/DBase/src/Objects/PathFree.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="91" width="111" x="3505" y="-299"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="Objects.Spirit" project="DBase" file="/DBase/src/Objects/Spirit.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="117" x="3644" y="-307"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="PacManGit.Controller.myWorker" project="DBase" 
+    file="/DBase/src/PacManGit/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="79" width="92" x="800" y="-510"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="PacManGit.ConvertIterator" project="DBase" 
+    file="/DBase/src/PacManGit/ConvertIterator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="93" width="115" x="2242" y="-300"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="PacManGit.MainMenu" project="DBase" file="/DBase/src/PacManGit/MainMenu.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="83" width="99" x="803" y="-663"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="PacManGit.FlyWeight" project="DBase" file="/DBase/src/PacManGit/FlyWeight.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="141" x="2134" y="-547"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="PacManGit.GamingEngine" project="DBase" 
+    file="/DBase/src/PacManGit/GamingEngine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="104" width="148" x="1424" y="-639"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="PacManGit.Observer" project="DBase" file="/DBase/src/PacManGit/Observer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="112" width="153" x="1307" y="-410"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="PacManGit.MazeGenerator" project="DBase" 
+    file="/DBase/src/PacManGit/MazeGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="94" width="128" x="2046" y="-346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="PacManGit.ImageFlyWeight" project="DBase" 
+    file="/DBase/src/PacManGit/ImageFlyWeight.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="89" width="114" x="1170" y="-259"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="PacManGit.Controller.movePlayer" project="DBase" 
+    file="/DBase/src/PacManGit/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="91" x="929" y="-424"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="PacManGit.Controller" project="DBase" file="/DBase/src/PacManGit/Controller.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="127" width="158" x="1035" y="-667"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="PacManGit.Controller.moveShot" project="DBase" 
+    file="/DBase/src/PacManGit/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="69" width="90" x="1062" y="-453"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="PacManGit.GUI" project="DBase" file="/DBase/src/PacManGit/GUI.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="153" x="1422" y="-252"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="Objects.Ammo" project="DBase" file="/DBase/src/Objects/Ammo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="101" width="158" x="2407" y="-442"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="Objects.InteractablesFactory" project="DBase" 
+    file="/DBase/src/Objects/InteractablesFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2432" y="-68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="PacManGit.AmmoPool" project="DBase" file="/DBase/src/PacManGit/AmmoPool.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1738" y="-394"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="PacManGit.Iterator.Node" project="DBase" 
+    file="/DBase/src/PacManGit/Iterator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="129" x="1852" y="-367"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="PacManGit.Iterator" project="DBase" file="/DBase/src/PacManGit/Iterator.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="87" width="141" x="1748" y="-264"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="33">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="34" name="obs">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="37" name="menu">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="39">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="40" name="getMaze">        
+        <position height="0" width="0" x="-2" y="-42"/>      
+      </attribute>      
+      <multiplicity id="41" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2150" y="-371"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="42">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="16"/>  
+  </nesting>  
+  <realization id="43">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="44">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="45" name="map">        
+        <position height="18" width="30" x="2047" y="-532"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2052" y="-500"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="47">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="26"/>  
+  </nesting>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="49">    
+    <bendpoint x="1366" y="-482"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="50" name="gameEngine">        
+        <position height="19" width="80" x="1313" y="-524"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="17" width="27" x="1398" y="-503"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="53" name="ammoPool"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="55">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="57">    
+    <bendpoint x="1956" y="-422"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="58" name="CellIterator">        
+        <position height="19" width="80" x="1890" y="-457"/>      
+      </attribute>      
+      <multiplicity id="59" minimum="0" maximum="2147483647">        
+        <position height="17" width="26" x="1989" y="-449"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="60">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="62">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="63" name="root"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="66">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <realization id="67">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="68">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="69" name="fly">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="70" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="71">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="72">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="73" name="charMaze">        
+        <position height="18" width="56" x="2536" y="-519"/>      
+      </attribute>      
+      <multiplicity id="74" minimum="0" maximum="2147483647">        
+        <position height="16" width="21" x="2655" y="-530"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="75">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <realization id="76">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="78">    
+    <bendpoint x="2022" y="-458"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="79" name="player">        
+        <position height="18" width="40" x="2354" y="-337"/>      
+      </attribute>      
+      <multiplicity id="80" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2390" y="-311"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="81">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="82">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="83" name="gamingEngine">        
+        <position height="19" width="94" x="1285" y="-614"/>      
+      </attribute>      
+      <multiplicity id="84" minimum="0" maximum="1">        
+        <position height="17" width="27" x="1329" y="-584"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <bendpoint x="2072" y="-384"/>    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="86" name="value">        
+        <position height="19" width="40" x="1983" y="-389"/>      
+      </attribute>      
+      <multiplicity id="87" minimum="0" maximum="1">        
+        <position height="17" width="27" x="2026" y="-391"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="88">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="89" name="obj">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="90" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="91">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="92">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="93" name="prev"/>      
+      <multiplicity id="94" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="96" name="next"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="98">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="99">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="100">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="101" name="instance">        
+        <position height="18" width="49" x="2139" y="-240"/>      
+      </attribute>      
+      <multiplicity id="102" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-2" y="-42"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="104" name="last"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="106">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <realization id="107">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="108">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="109" name="AmmoList"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="111">    
+    <bendpoint x="1798" y="-84"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="112" name="actFactory">        
+        <position height="19" width="73" x="1886" y="-107"/>      
+      </attribute>      
+      <multiplicity id="113" minimum="0" maximum="1">        
+        <position height="17" width="27" x="1840" y="-100"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="115" name="gui">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="116" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="117">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="24"/>  
+  </nesting>  
+  <association id="118">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="119" name="currentNode">        
+        <position height="19" width="81" x="1744" y="-314"/>      
+      </attribute>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="121">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <generalization id="122">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="123">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="124" name="converter">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="125" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2286" y="-326"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="126">    
+    <bendpoint x="1522" y="-492"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="127" name="observer">        
+        <position height="19" width="64" x="1411" y="-453"/>      
+      </attribute>      
+      <multiplicity id="128" minimum="0" maximum="1">        
+        <position height="17" width="27" x="1474" y="-440"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="129">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="130">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="131" name="actFactory"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

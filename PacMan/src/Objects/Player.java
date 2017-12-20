@@ -4,27 +4,34 @@ package Objects;
 public class Player extends State implements Interactables {
 		private String newDirection = "Stop";
 		private String oldDirection = "Stop";
-
-		private String rotationDir = "Stop" ;
-	 	// private int Health = 0;
-	 	private int Spirit = 0;
-	 	private int Ammo = 0;
+		private String rotationDir = "Down" ;
+	 	private int Spirit = 4;
+	 	private int Ammo = 6;
 		private int Score = 0;
-	 	private int IR = 0;
-	 	private int JD = 0;
-	 	private int IL = 0;
-	 	private int JL = 0;
-		private int IndexY = 22;
+	 	private int IndexY = 22;
 		private int IndexX = 22;
+		
+	 	private Boolean Winner = false;
+	 	private Boolean Loser = false;
 
 	 	private Boolean Existance = false;
+	 	@Override
+	 	public boolean isWinner() {
+	 	// TODO Auto-generated method stub
+	 	super.isWinner();
+	 	return Winner;
+	 	}
+	 	@Override
+	 	public boolean isLoser() {
+	 	// TODO Auto-generated method stub
+	 	super.isLoser();
+	 	return Loser;
+	 	}
 		
 		@Override
 		public int getScore() {
-			// TODO Auto-generated method stub
-			//System.out.println(Score);
-			//super.getScore();
-		return Score;
+			super.getScore();
+			return Score;
 		}
 	 
 	 	@Override
@@ -34,10 +41,7 @@ public class Player extends State implements Interactables {
 	 		return Ammo;
 	 	}
 	 
-	 	/*
-	 	 * @Override public int getHealth() { // TODO Auto-generated method stub
-	 	 * return super.getHealth(); }
-	 	 */
+	 	
 	 	@Override
 	 	public int getIR() {
 			return ((IndexY+21) / 22);
@@ -121,8 +125,11 @@ public class Player extends State implements Interactables {
 	 	@Override
 	 	public void setAmmo(int x) {
 	 		super.setAmmo(x);
+	 		
 	 		Ammo = x;
-	 
+	 		if (Ammo > 6){
+	 			Ammo = 6;
+	 		}	 
 	 	}
 		@Override
 		public void setScore(int y) {
@@ -130,10 +137,7 @@ public class Player extends State implements Interactables {
 			super.setScore(y);
 			Score=y;
 		}
-	 	/*
-	 	 * @Override public void setHealth(int x) { // TODO Auto-generated method
-	 	 * stub super.setHealth(x); Health=x; }
-	 	 */
+	 	
 	 
 	 	@Override
 	 	public void setNewDirection(String x) {
@@ -141,7 +145,7 @@ public class Player extends State implements Interactables {
 	 		super.setNewDirection(x);
 	 		newDirection = x;
 	 	}
-@Override
+        @Override
 	 	public void setRotationDir(String x) {
 	 	// TODO Auto-generated method stub
 	 	super.setRotationDir(x);
@@ -160,6 +164,9 @@ public class Player extends State implements Interactables {
 	 		// TODO Auto-generated method stub
 	 		super.setSpirit(x);
 	 		Spirit = x;
+	 		if(Spirit > 8){
+	 			Spirit = 8;
+	 		}
 	 	}
 	 
 	 	@Override
@@ -174,6 +181,28 @@ public class Player extends State implements Interactables {
 	 		// TODO Auto-generated method stub
 	 		super.setindexY(y);
 	 		IndexY = y;
+	 	}
+	 	@Override
+	 	public void setWinner(boolean e) {
+	 	// TODO Auto-generated method stub
+	 		super.setWinner(e);
+	 		Winner = e;
+	 	}
+	 	@Override
+	 	public void setLoser(boolean e) {
+	 	// TODO Auto-generated method stub
+	 		super.setLoser(e);
+	 		Loser = e;
+	 	}
+	 	
+	 	
+	 	public	void resetPosition(){
+	 		setindexX(22);
+			setindexY(22);
+			setAmmo(6);
+			setNewDirection("Stop");
+			setOldDirection("Stop");
+			setRotationDir("Down");
 	 	}
 	 
 	 }

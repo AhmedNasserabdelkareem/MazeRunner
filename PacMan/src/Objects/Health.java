@@ -1,7 +1,7 @@
 package Objects;
 
 public class Health extends State implements Interactables{
-	private boolean Existance = false;
+	private boolean Existance = true;
 @Override
 public void setExistance(boolean e) {
 	// TODO Auto-generated method stub
@@ -12,6 +12,6 @@ public void setExistance(boolean e) {
 	@Override
 	public boolean isExisted() {
 		// TODO Auto-generated method stub
-		return false;
+		return Existance;
 	}
 }

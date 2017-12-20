@@ -1,0 +1,409 @@
+2017-12-21 00:26:24 INFO  Controller:33 - Game is started
+2017-12-21 00:26:25 INFO  Controller:179 - Played selected Easy Game
+2017-12-21 00:26:25 INFO  FlyWeight:22 - Maze is Generated
+2017-12-21 00:26:27 INFO  Controller:69 - Player is moving Right
+2017-12-21 00:26:29 INFO  GamingEngine:254 - Player gets Half Spirit Gift
+2017-12-21 00:26:30 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:30 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:30 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:30 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:30 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:30 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:30 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:30 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:31 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:31 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:31 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 00:26:31 INFO  Controller:77 - Player is shoting Ammo
+2017-12-21 00:26:31 INFO  GamingEngine:295 - Ammo destroyed an Object
+2017-12-21 00:26:31 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:32 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:32 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:32 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:32 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:32 WARN  Controller:147 - Null Pointer Exception
+2017-12-21 00:26:33 INFO  GamingEngine:283 - There is Block
+2017-12-21 00:26:33 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:03:58 INFO  Controller:32 - Game is started
+2017-12-21 01:03:59 INFO  Controller:178 - Played selected Easy Game
+2017-12-21 01:03:59 INFO  FlyWeight:22 - Maze is Generated
+2017-12-21 01:04:00 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:02 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:02 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:02 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:03 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  Controller:64 - Player is moving Up
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:03 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:03 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:04 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:04 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:04 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:04 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:04 INFO  Controller:64 - Player is moving Up
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:04 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:05 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:05 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:05 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:05 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:05 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:05 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:06 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:06 INFO  Controller:70 - Player is moving Left
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:06 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  Controller:70 - Player is moving Left
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:07 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:08 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:08 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:08 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:09 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:09 INFO  Controller:70 - Player is moving Left
+2017-12-21 01:04:09 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:10 INFO  GamingEngine:41 - Ammo is created
+2017-12-21 01:04:10 INFO  Controller:76 - Player is shoting Ammo
+2017-12-21 01:04:11 WARN  Controller:146 - Null Pointer Exception - No more Ammo
+2017-12-21 01:04:12 INFO  Controller:64 - Player is moving Up
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:12 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:13 INFO  Controller:64 - Player is moving Up
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:13 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  Controller:68 - Player is moving Right
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  Controller:64 - Player is moving Up
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:14 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:16 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:16 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:16 INFO  Controller:70 - Player is moving Left
+2017-12-21 01:04:17 INFO  Controller:66 - Player is moving Down
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:283 - There is Block
+2017-12-21 01:04:17 INFO  GamingEngine:236 - Player is dead

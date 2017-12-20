@@ -11,7 +11,8 @@ public class AmmoGift  extends State implements Interactables{
 	@Override
 	public boolean isExisted() {
 		// TODO Auto-generated method stub
-		return super.isExisted();
+		super.isExisted();
+		return Existance;
 	}
 
 }

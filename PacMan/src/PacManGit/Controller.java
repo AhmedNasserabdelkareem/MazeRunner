@@ -1,32 +1,47 @@
 package PacManGit;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
+import java.util.List;
 
-import Objects.Ammo;
-import Objects.FullBomb;
-import Objects.HalfBomb;
-import Objects.Interactables;
-import Objects.Spirit;
-import Objects.Stones;
-import Objects.Tree;
+import javax.swing.SwingWorker;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+import mazeGenerate.EasyGame;
+import mazeGenerate.HardGame;
+import mazeGenerate.NormalGame;
 
 public class Controller {
-	public GamingEngine gamingEngine = new GamingEngine();
-	public Thread playerTherad = new Thread(new movePlayer());
-	public SecondGUI g;
-	public MainMenu menu = new MainMenu();
-	private Options option = new Options();
-	// private Thread[] shotsTherad = { new Thread(new moveShot()), new
-	// Thread(new moveShot()), new Thread(new moveShot()),
-	// new Thread(new moveShot()), new Thread(new moveShot()), new Thread(new
-	// moveShot()) };
-	public boolean end = false;
-	KeyListener keyLi = new KeyListener() {
+	public GamingEngine gamingEngine;
+	public Thread playerTherad;
+	public Observer obs ;
+	public MainMenu menu;
+	private Options option;
+	public boolean endGame;
+	public SwingWorker<Boolean, Integer> worker;
+	//Nasser
+	public int levelSelect = 1;
+	public final static Logger logger = Logger.getLogger(Controller.class);
+	
+	
+	public Controller() {
+		logger.info("Game is started");
+		gamingEngine = new GamingEngine();
+		playerTherad = new Thread(new movePlayer());
+		menu = new MainMenu();
+		option = new Options();
+		endGame = false;
+		worker = new  myWorker();
+		obs = new Observer(gamingEngine);
+		gamingEngine.setObserver(obs);
+		initializeMenuButtons();
+		initializeBackObserverButton();
+	}
+	public KeyListener keyLi = new KeyListener() {
 
 		@Override
 		public void keyTyped(KeyEvent e) {
@@ -42,422 +57,207 @@ public class Controller {
 
 		@Override
 		public void keyPressed(KeyEvent e) {
-			// TODO Auto-generated method stub
 			int keyCode = e.getKeyCode();
 			String temp = KeyEvent.getKeyText(keyCode);
-			// System.out.println(temp);
 			if (temp.equals("Up") || temp.equals("Down") || temp.equals("Right") || temp.equals("Left")) {
-
-				gamingEngine.player.setNewDirection(temp);
-			}
-			if (temp.equals("Space")) {
-				int ammos = gamingEngine.player.getAmmo();
-				gamingEngine.player.setAmmo(--ammos);
-				moveShot ammoThread = new moveShot();
-				ammoThread.ammoIndex = gamingEngine.createAmmo();
-				Thread thread = new Thread(ammoThread);
-				Ammo ammo = gamingEngine.getAmmo(ammoThread.ammoIndex);
-				ammo.setindexX(gamingEngine.player.getindexX() + 22);
-				ammo.setindexY(gamingEngine.player.getindexY() + 11);
-				if(!gamingEngine.player.getOldDirection().equals("Stop")){
-					ammo.setOldDirection(gamingEngine.player.getOldDirection());
-				}else{
-					ammo.setOldDirection(gamingEngine.player.getRotationDir());
+				if(temp.equals("Up")){
+					logger.info("Player is moving Up");
+				}else if(temp.equals("Down")){
+					logger.info("Player is moving Down");					
+				}else if(temp.equals("Right")){
+					logger.info("Player is moving Right");
+				}else if(temp.equals("Left")){
+					logger.info("Player is moving Left");
 				}
-				thread.start();				
-			}
-			if(temp.equals("W") || temp.equals("D") || temp.equals("S") || temp.equals("A")){
-				String nd = gamingEngine.player.getNewDirection();
-				String od = gamingEngine.player.getOldDirection();
-				if(nd.equals("Stop") && od.equals("Stop")){
-					String rd = gamingEngine.player.getRotationDir();
-					switch(temp){
-					case "W":
-						rd = "Up";
-						break;
-					case "D":
-						rd = "Right";
-						break;
-					case "A":
-						rd = "Left";
-						break;
-					case "S":
-						rd = "Down";
-						break;						
-					}
-					gamingEngine.player.setRotationDir(rd);
+				gamingEngine.setPlayerNewDirection(temp);
+			}else if (temp.equals("Space")) {
+				int index = gamingEngine.createAmmo();
+				if(index >= 0){
+					logger.info("Player is shoting Ammo");
+					moveShot ammoThread = new moveShot();
+					ammoThread.ammoIndex = index;
+					Thread thread = new Thread(ammoThread);
+					thread.start();
+				}			
+			}else if(temp.equals("W") || temp.equals("D") || temp.equals("S") || temp.equals("A")){
+				if(temp.equals("W")){
+					logger.info("Player is rotating Up");
+				}else if(temp.equals("S")){
+					logger.info("Player is rotating Down");					
+				}else if(temp.equals("D")){
+					logger.info("Player is rotating Right");
+				}else if(temp.equals("A")){
+					logger.info("Player is rotating Left");
 				}
+				gamingEngine.setPlayerRoutationDirection(temp);
 			}
-
 		}
 	};
 
 	private class movePlayer implements Runnable {
 		public void run() {
 			try {
-				boolean stop = false;
-				for (; !stop;) {
-					Thread.sleep(95);
-					// System.out.println(key);
-					String oldDir = gamingEngine.player.getOldDirection();
-					String newDir = gamingEngine.player.getNewDirection();
-					int ID = gamingEngine.player.getIR();
-					int JR = gamingEngine.player.getJD();
-					int IL = gamingEngine.player.getIL();
-					int JL = gamingEngine.player.getJL();
-					int ISmall = gamingEngine.player.getISmall();
-					int JSmall = gamingEngine.player.getJSmall();
-					boolean B1 = false;
-					boolean B2 = false;
-					// isdied game . isdied stop = true;
-					// player existance = false
-					if (newDir.equals("Stop")) {
-						switch (oldDir) {
-						case "Up":
-							if (ISmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL - 1, JR);
-								B1 = gamingEngine.isThereBlock(IL - 1, JL);
-							}
-							// System.out.println("here");
-
-							break;
-						case "Down":
-							if (ISmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL + 1, JR);
-								B1 = gamingEngine.isThereBlock(IL + 1, JL);
-							}
-							break;
-						case "Right":
-							if (JSmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL, JL + 1);
-								B1 = gamingEngine.isThereBlock(ID, JL + 1);
-							}
-							break;
-						case "Left":
-							if (JSmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL, JL - 1);
-								B1 = gamingEngine.isThereBlock(ID, JL - 1);
-							}
-							break;
+				for (;!endGame;) {
+					Thread.sleep(10);
+					gamingEngine.movePlayer();
+					boolean win =gamingEngine.isPlayerWin();
+					if(win){
+						logger.info("Player wins");
+						int MyScore = (int) (((gamingEngine.timeMilile -(System.currentTimeMillis()- gamingEngine.start)))/1000);
+						int Ammosc = 1;
+						if (gamingEngine.player.getAmmo()==6){
+							Ammosc = 1;
+						}else{
+							Ammosc = 6-(gamingEngine.player.getAmmo()); 
 						}
-						if (B1 || B2) {
-							oldDir = "Stop";
-							gamingEngine.player.setOldDirection(oldDir);
-						}
-					} else {
-						switch (newDir) {
-						case "Up":
-							if (ISmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL - 1, JR);
-								B1 = gamingEngine.isThereBlock(IL - 1, JL);
-							}
-							break;
-						case "Down":
-							if (ISmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL + 1, JR);
-								B1 = gamingEngine.isThereBlock(IL + 1, JL);
-							}
-							break;
-						case "Right":
-							if (JSmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL, JL + 1);
-								B1 = gamingEngine.isThereBlock(ID, JL + 1);
-							}
-							break;
-						case "Left":
-							if (JSmall == 0) {
-								B2 = gamingEngine.isThereBlock(IL, JL - 1);
-								B1 = gamingEngine.isThereBlock(ID, JL - 1);
-							}
-							break;
-						}
-						if (!(B1 || B2)) {
-							oldDir = newDir;
-							newDir = "Stop";
-							gamingEngine.player.setOldDirection(oldDir);
-							gamingEngine.player.setNewDirection(newDir);
-						} else {
-							B1 = false;
-							B2 = false;
-							switch (oldDir) {
-							case "Up":
-								if (ISmall == 0) {
-									B2 = gamingEngine.isThereBlock(IL - 1, JR);
-									B1 = gamingEngine.isThereBlock(IL - 1, JL);
-								}
-								// System.out.println("here");
-
-								break;
-							case "Down":
-								if (ISmall == 0) {
-									B2 = gamingEngine.isThereBlock(IL + 1, JR);
-									B1 = gamingEngine.isThereBlock(IL + 1, JL);
-								}
-								break;
-							case "Right":
-								if (JSmall == 0) {
-									B2 = gamingEngine.isThereBlock(IL, JL + 1);
-									B1 = gamingEngine.isThereBlock(ID, JL + 1);
-								}
-								break;
-							case "Left":
-								if (JSmall == 0) {
-									B2 = gamingEngine.isThereBlock(IL, JL - 1);
-									B1 = gamingEngine.isThereBlock(ID, JL - 1);
-								}
-								break;
-							}
-							if (B1 || B2) {
-								oldDir = "Stop";
-								gamingEngine.player.setOldDirection(oldDir);
-							}
-						}
+						int FinalScore = (MyScore*levelSelect*(gamingEngine.player.getSpirit()/2))/(Ammosc);
+						gamingEngine.player.setScore(FinalScore);
+						obs.win();
 					}
-
-					int positionY = gamingEngine.player.getindexY();
-					int positionX = gamingEngine.player.getindexX();
-					switch (oldDir) {
-					case "Up":
-
-						positionY -= 1;
-						// p.repaint();
-						break;
-					case "Down":
-						positionY += 1;
-						// p.repaint();
-						break;
-					case "Right":
-						positionX += 1;
-						// p.repaint();
-						break;
-					case "Left":
-						positionX -= 1;
-						// p.repaint();
-						break;
+					boolean lose = gamingEngine.isPlayerLose();
+					if(lose){
+						logger.info("Player is loser xD");
+						obs.lose();
 					}
-					// System.out.println(positionX + " "+ positionY +" "+ B1+ "
-					// "+ B2+ " "+ IL + " "+ JL + " "+ ID+ " "+
-					// JR + " " + ISmall + " "+ JSmall);
-					gamingEngine.player.setindexX(positionX);
-					gamingEngine.player.setindexY(positionY);
-					gamingEngine.player.setScore(3);
-					g.updatePlayer(gamingEngine.player);
-					g.updateScore(gamingEngine.player);
-					g.updateHearts(7);
-
+					if(!endGame){
+						endGame = win || lose;
+					}
 				}
 			} catch (InterruptedException e) {
-				System.out.println("llll");
-			}catch(ClassCastException f)
-			{
-				System.out.println(f);
+				logger.warn("Interrupting threads Exception");
 			}
 		}
 
 	}
-
+	
+	
 	private class moveShot implements Runnable {
 		public int ammoIndex;
-
 		public void run() {
 			try {
 				boolean stop = false;
-				for (; !stop;) {
-					Thread.sleep(10);
-					Ammo myAmmo = gamingEngine.getAmmo(ammoIndex);
-					String Dir = myAmmo.getOldDirection();
-					int ID = myAmmo.getIR();
-					int JR = myAmmo.getJD();
-					int IL = myAmmo.getIL();
-					int JL = myAmmo.getJL();
-					//char next1 = 'a';
-					//char next2 = 'a';
-					boolean B1 = false;
-					boolean B2 = false;
-					
-					
-
-					switch (Dir) {
-					case "Up":
-						B1 = gamingEngine.AmmoisDestroyed(IL, JR);
-						B2 = gamingEngine.AmmoisDestroyed(IL, JL);
-						break;
-					case "Down":
-						B1 = gamingEngine.AmmoisDestroyed(IL, JR);
-						B2 = gamingEngine.AmmoisDestroyed(IL, JL);
-						break;
-					case "Right":
-						B1 = gamingEngine.AmmoisDestroyed(IL, JL);
-						B2 = gamingEngine.AmmoisDestroyed(ID, JL);
-						break;
-					case "Left":
-						B1 = gamingEngine.AmmoisDestroyed(IL, JL - 1);
-						B2 = gamingEngine.AmmoisDestroyed(ID, JL - 1);
-						break;
+				obs.shotSound();
+				for (; !stop && !endGame;) {
+					Thread.sleep(5);
+					try{
+						gamingEngine.moveShot(ammoIndex);
+					}catch(NullPointerException e){
+						stop = true;
+						logger.warn("Null Pointer Exception - No more Ammo");
 					}
-					
-					
-					if(B1 || B2){
-						stop = true;
-						myAmmo.setExistance(false);
-						
-						//g.updateAmmos();
-						// ammo animation
-						// destroyed in the method (Done in gamIngEngine)
-						//I will Update ammo in gui in  main thread if there more than thread
-					}
-
-					/*if (next1 == 'W' || next2 == 'W') {
-						myAmmo.setExistance(false);
-						stop = true;
-						// ammo animation
-					} else if (next1 == 'T' || next2 == 'T') {
-						myAmmo.setExistance(false);
-						stop = true;
-						// ammo animation
-						// destroy
-					} else if (next1 == 'B' || next2 == 'B') {
-						myAmmo.setExistance(false);
-						stop = true;
-						// ammo animation
-						// destroy
-					}*/
-
-					int positionY = myAmmo.getindexY();
-					int positionX = myAmmo.getindexX();
-					switch (Dir) {
-					case "Up":
-
-						positionY -= 1;
-						// p.repaint();
-						break;
-					case "Down":
-						positionY += 1;
-						// p.repaint();
-						break;
-					case "Right":
-						positionX += 1;
-						// p.repaint();
-						break;
-					case "Left":
-						positionX -= 1;
-						// p.repaint();
-						break;
-					}
-					myAmmo.setindexX(positionX);
-					myAmmo.setindexY(positionY);
-					/*Iterator i = gamingEngine.CellIterator;
-					ArrayList<Ammo> li = new ArrayList<>();
-					gamingEngine.CellIterator.getInstance();
-					while(i.hasNext()){
-						li.add((Ammo)i.next());
-					}*/
-					g.updateAmmos(myAmmo);
-					
-				}
+				}				
 			} catch (InterruptedException e) {
-
+				logger.warn("Interrupting threads Exception");
 			}
 		}
 	}
-
-	public static void main(String args[]) throws InterruptedException {
-		Controller control = new Controller();
-		initializeMenuButtons(control);
-		control.menu.frmMainmenu.setVisible(true);
-		
-		//control.playerTherad.join(11);
-		/*while(control.playerTherad.isAlive()){
-			Iterator i = control.gamingEngine.CellIterator;
-			ArrayList<Ammo> li = new ArrayList<>();
-			control.gamingEngine.CellIterator.getInstance();
-			while(i.hasNext()){
-				li.add((Ammo)i.next());
-			}
-			control.g.updateAmmos(li);
-		}*/
-		
-
-		// update player
-
-		/*
-		 * EventQueue.invokeLater(new Runnable() { public void run() { try { //
-		 * PaintGui window = new PaintGui(); control.frmPaint.setVisible(true);
-		 * } catch (Exception e) { e.printStackTrace(); } } });
-		 */
-
-		
-
-		// t.interrupt();
-
-		/*
-		 * t2 = new Thread(new moveShot()); t2.start(); long startTime =
-		 * System.currentTimeMillis();
-		 */
-		// while (control.playerTherad.isAlive()) {
-		
-	}
-
-	private static void initializeMenuButtons(Controller c) {
-		c.menu.easyBtn.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				c.gamingEngine.map.getMazeGenerator().setEasyLevel();
-				c.menu.frmMainmenu.setVisible(false);
-				initializeGame(c);
-			}
-		});
-		c.menu.Option.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				c.option.setVisible(true);
-			}
-		});
-		c.menu.normalBtn.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				c.gamingEngine.map.getMazeGenerator().setNormalLevel();
-				c.menu.frmMainmenu.setVisible(false);
-				initializeGame(c);
-			}
-		});
-		c.menu.Hard.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				c.gamingEngine.map.getMazeGenerator().setHardLevel();
-				c.menu.frmMainmenu.setVisible(false);
-				initializeGame(c);
-			}
-		});
-		c.option.back_BTN.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				c.option.setVisible(false);
-			}
-		});
-	}
-	private static void initializeGame(Controller c) {
-		Interactables[][] maze = c.gamingEngine.map.getCharMaze();
-		c.g = new SecondGUI();
-		c.g.setarray(maze);
-		c.g.gui.addKeyListener(c.keyLi);
-		c.g.gui.setFocusable(true);
-		c.g.draw();
-		c.playerTherad.start();
-		
-		//while (!c.end) {
-			/*try {
-				c.playerTherad.join(27);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}*/
-			// absorver update all
-			//
-		//}
-	}
 	
+	public class myWorker extends SwingWorker<Boolean, Integer>{
+		@Override
+		   protected Boolean doInBackground() throws Exception {
+		    // Simulate doing something useful.
+		    for (;!endGame;) {
+		     Thread.sleep(5);
+		     int i = 0;
+		     publish(i);
+		    }
+			return endGame;			
+		}
+		   @Override
+		   protected void process(List<Integer> chunks) {
+			  if(!endGame)
+			   gamingEngine.notifyObserver();
+		   }
+	};
+	
+	
+	private  void initializeMenuButtons() {
+		menu.easyBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Played selected Easy Game");
+				levelSelect=1;
+				gamingEngine.map.getMazeGenerator().setLevel(new EasyGame());
+				//menu.frmMainmenu.dispose();
+				menu.frmMainmenu.setVisible(false);
+				initializeGame();
+			}
+		});
+		
+		menu.normalBtn.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Played selected Normal Game");
+				levelSelect=2;
+				gamingEngine.map.getMazeGenerator().setLevel(new NormalGame());
+				//menu.frmMainmenu.dispose();
+				menu.frmMainmenu.setVisible(false);
+				initializeGame();
+			}
+		});
+		menu.Hard.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Played selected Hard Game");
+				levelSelect=3;
+				gamingEngine.map.getMazeGenerator().setLevel(new HardGame());
+				//menu.frmMainmenu.dispose();
+				menu.frmMainmenu.setVisible(false);
+				initializeGame();
+			}
+		});
+		menu.Option.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				option.setVisible(true);
+			}
+		});
+		
+		option.back_BTN.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				option.setVisible(false);
+			}
+		});
+		
+	}
+	private void initializeBackObserverButton() {
+		obs.gui.home.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				obs.gui.dispose();
+				endGame = true;
+				resetVariables();
+				menu.frmMainmenu.setVisible(true);				
+			}
+		});
+	}
+	private void initializeGame() {
+		endGame = false;
+		gamingEngine.map.getCharMaze();	
+		obs.gui.addKeyListener(keyLi);
+		gamingEngine.drawMaze();
+		gamingEngine.start = System.currentTimeMillis();
+		playerTherad.start();		
+		worker.execute();		
+	}
+	private void resetVariables(){		
+		gamingEngine = new GamingEngine();
+		playerTherad = new Thread(new movePlayer());
+		worker = new  myWorker();
+		obs = new Observer(gamingEngine);
+		gamingEngine.setObserver(obs);
+		initializeBackObserverButton();
+	}
+
+		  
+	public static void main(String args[]) throws InterruptedException {
+		String log4jConfPath = "log4j.properties";
+		PropertyConfigurator.configure(log4jConfPath);
+		Controller control = new Controller();
+		control.menu.frmMainmenu.setVisible(true);
+	}
 }

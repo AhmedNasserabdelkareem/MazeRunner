@@ -1,6 +1,6 @@
 package PacManGit;
 
-import Objects.Interactables;
+import Objects.Ammo;
 
 public class Iterator {
 	private Node root = new Node();
@@ -14,7 +14,7 @@ public class Iterator {
 		last.setNext(null);
 		currentNode = root;
 	}
-	public void add(Interactables value) {
+	public void add(Ammo value) {
 		Node newNode = new Node();
 		
 		newNode.setValue(value);
@@ -32,12 +32,12 @@ public class Iterator {
 		return !last.equals(currentNode.next);
 		
 	}
-	public Interactables next() {
+	public Ammo next() {
 		currentNode = currentNode.next;
 		return currentNode.getValue();
 	}
 	
-	public boolean remove(Interactables o) {
+	public boolean remove(Ammo o) {
 		Node temp = root.next;
 		while(temp.hasNext()) {
 			if(temp.getValue().equals(o)) {
@@ -62,12 +62,12 @@ public class Iterator {
 		return this;
 	}
 	
-	public Iterator getInstance() {
+	public Iterator ResetPointer() {
 		currentNode = root;
 		return this;
 	}
 	class Node {
-		private Interactables value;
+		private Ammo value;
 		private Node next;
 		private Node prev;
 		public boolean hasNext() {
@@ -81,7 +81,7 @@ public class Iterator {
 			next = x;
 		}
 		
-		public void setValue(Interactables x) {
+		public void setValue(Ammo x) {
 			value = x;
 		}
 		public Node getPrev() {
@@ -91,7 +91,7 @@ public class Iterator {
 			return next;
 		}
 		
-		public Interactables getValue() {
+		public Ammo getValue() {
 			return value;
 		}
 		
