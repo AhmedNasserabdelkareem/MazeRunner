@@ -112,6 +112,7 @@ public class Controller {
 						}
 						int FinalScore = (MyScore*levelSelect*(gamingEngine.player.getSpirit()/2))/(Ammosc);
 						gamingEngine.player.setScore(FinalScore);
+						gamingEngine.setHighScore();
 						obs.win();
 					}
 					boolean lose = gamingEngine.isPlayerLose();

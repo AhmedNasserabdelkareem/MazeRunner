@@ -33,6 +33,8 @@ public class GUI extends JFrame {
 	// private boolean flag = false;
 	public JLabel time = new JLabel();
 	public JLabel score = new JLabel();
+	public JLabel highscore = new JLabel();
+
 	public ArrayList<JLabel> lives = new ArrayList<>();
 
 	public ArrayList<JLabel> ammos = new ArrayList<>();

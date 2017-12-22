@@ -54,11 +54,11 @@ public class Observer {
 		//add back button
 		gui.scorePanel.add(gui.home);
 		
-		gui.score = new JLabel("Score: " + gameEngine.player.getScore());
-		gui.score.setLocation(35, 10);
-		gui.score.setSize(180, 25);		
-		gui.score.setFont(new Font("Comic Sans MS", Font.BOLD, 25));
-		gui.scorePanel.add(gui.score);
+		gui.highscore = new JLabel("HighScore: " + gameEngine.getHighScore());
+		gui.highscore.setLocation(35, 10);
+		gui.highscore.setSize(200, 32);		
+		gui.highscore.setFont(new Font("Comic Sans MS", Font.BOLD, 25));
+		gui.scorePanel.add(gui.highscore);
 
 		// update lives
 		gui.lives.clear();
@@ -198,6 +198,7 @@ public class Observer {
 		gui.home.setSize(200,200);
 		gui.score.setFont(new Font("Arial Black", Font.BOLD, 38));
 		gui.score.setBounds(572, 299, 263, 38);
+		gui.score.setText(gameEngine.player.getScore()+"");
 		gui.backGround.setBounds(0, 0, 1000, 735);
 		gui.win.add(gui.score);
 		gui.win.add(gui.backGround);
@@ -211,12 +212,12 @@ public class Observer {
 		gui.home.setLocation(20,459);
 		gui.scorePanel.add(gui.home);
 		//System.out.println(home.getParent());
-		gui.score = new JLabel("Score: 00000");
+		gui.highscore = new JLabel("High Score:"+ gameEngine.getHighScore());
 		gui.time = new JLabel("time  :00:00");
-		gui.score.setLocation(35, 10);
-		gui.score.setSize(180, 25);
-		gui.score.setFont(new Font("Comic Sans MS", Font.BOLD, 25));
-		gui.scorePanel.add(gui.score);
+		gui.highscore.setLocation(35, 10);
+		gui.highscore.setSize(200, 25);
+		gui.highscore.setFont(new Font("Comic Sans MS", Font.BOLD, 25));
+		gui.scorePanel.add(gui.highscore);
 
 		// draw lives
 		for (int i = 0; i < 4; i++) {
@@ -244,12 +245,18 @@ public class Observer {
 		winSound();
 		gui.scorePanel.remove(gui.home);
 		gui.scorePanel.remove(gui.score);
+		gui.scorePanel.remove(gui.highscore);
 		gui.home.setLocation(410,459);
 		gui.score.setFont(new Font("Arial Black", Font.BOLD, 38));
 		gui.score.setBounds(572, 299, 263, 38);
 		gui.score.setText(gameEngine.player.getScore()+" ");
+		gui.highscore.setFont(new Font("Arial Black", Font.BOLD, 38));
+		gui.highscore.setBounds(572, 330, 500, 100);
+		gui.highscore.setText(gameEngine.getHighScore()+"");
+		gui.win.add(gui.highscore,0);
 		gui.win.add(gui.score,0);
 		gui.win.add(gui.home, 0);
+		
 		gui.win.setVisible(true);
 		gui.win.repaint();
 		gui.player.setVisible(false);

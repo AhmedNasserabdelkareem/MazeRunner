@@ -34,7 +34,11 @@ public class GamingEngine {
 	//time
 	long timeMilile = 120000;
 	long start = System.currentTimeMillis();
+	private int HighScore = 0;
 	
+	public GamingEngine() {
+		setHighScore();
+	}
 	public int createAmmo() {
 		int ammosN = player.getAmmo();
 		if ( ammosN > 0){
@@ -150,10 +154,28 @@ public class GamingEngine {
 			actWithComponent (player.getIR(),player.getJD());
 		}
 		
+		//check time
+		isTimeEnd();
 		return true;
 	}
 	
 	
+	private void isTimeEnd() {
+		if((timeMilile -(System.currentTimeMillis()- start)) < 0){
+			int sp = player.getSpirit();
+			logger.info("Player is dead");
+			if(sp%2 == 0){
+				player.setSpirit(sp-2);
+			}else{
+				player.setSpirit(sp-1);
+			}
+			timeMilile = 120000;
+			start = System.currentTimeMillis();
+			player.resetPosition();			
+			observer.showredPanel();
+			observer.loseSound();
+		}		
+	}
 	public Ammo moveShot(int ammoIndex){		
 		Ammo myAmmo = getAmmo(ammoIndex);
 		String Dir = myAmmo.getOldDirection();
@@ -320,7 +342,7 @@ public class GamingEngine {
 	}
 	public boolean isPlayerLose() {
 		// TODO Auto-generated method stub
-		return player.getSpirit() < 0 || (timeMilile -(System.currentTimeMillis()- start)) < 0;
+		return player.getSpirit() < 0 ;
 	}
 	public long getMin() {
 		long x =(timeMilile -(System.currentTimeMillis()- start))/60000;
@@ -365,11 +387,10 @@ public class GamingEngine {
 		}
 	}
 	
-	
-	public int getHighScore() {
+	public void setHighScore() {
 		int score = player.getScore();
 		File highScore = new File("HighScore.maze");
-		if(highScore.exists()) {
+		if (highScore.exists()) {
 			try {
 				BufferedReader in = new BufferedReader(new FileReader(highScore));
 				int currentHighScore = Integer.parseInt(in.readLine());
@@ -379,10 +400,10 @@ public class GamingEngine {
 				out.flush();
 				out.close();
 				in.close();
-				return maxScore;
+				HighScore = maxScore;
 			} catch (Exception e) {
 				logger.warn("Writing Score Exception");
-				return score;
+				HighScore = score;
 			}
 		} else {
 			try {
@@ -390,12 +411,16 @@ public class GamingEngine {
 				out.print(score);
 				out.flush();
 				out.close();
-				return score;
+				HighScore = score;
 			} catch (FileNotFoundException e) {
 				logger.warn("File Not Found Exception");
-				return score;
+				HighScore = score;
 			}
 		}
+	}
+
+	public int getHighScore() {
+		return HighScore ;
 	}
 	
 }
